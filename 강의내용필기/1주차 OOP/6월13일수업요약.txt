@@ -1,0 +1,140 @@
+Intro...
+OOAD를 통해서
+전자손목시계를 설계해보려고 함.
+카페에 팀별로 설계한 내용을 공유하도록 함
+팀별로 디자인패턴을 적용해서 수요일 (6/15)까지 제출하는듯
+
+그냥 배운 기술만을 가지고 설계문서를 만들면 떨어짐
+stakeholder ? 를 만족시킬 수 있는 모든 설계가 담겨있어야 함
+예제) 기능적 문제가 발생하더라도 유저는 모르고, 사용할 수 있어야함
+  -> Reliability, Avalivality, 기능안정성(Functional Safety), NFR, Durability 등등
+  -> 백업서버 활용, Data Sync기능 등등
+  -> 요러한 접근으로 해야함
+  -> 아키텍쳐가 백업서버를 애초에 설계했어야 함
+
+:: 암튼간 아키텍쳐 디자인을 하고나면, Stakeholder에게 당신이 생각하는 모든 안전장치는 아키텍쳐 문서에 잘 들어가 있으니 걱정말아라 라는 컨셉이 보여야 함
+
+Software Development
+문제를 SW Program으로 해결하는 것
+ *. 언어에 맞게 분석과 디자인이 적용되어야 함 (OOAD - 객체지향개발방법론)
+
+Software Process Model
+*. Software Development Life Cycle
+60년대 이전에 SW는 개인이 하는 Art
+60년 이후부터는 SW Engneering이 필요함
+-> 폭포수 모델 => SW Crysis(?)
+Incremental -> 조금씩 만드는거
+CBD -> 컴포넌트로 배치만 하는거 (리유즈 베이스)
+Iterative -> 빙글빙글 도는거, => 일반적으로 객체지향에서 잘 사용됨
+*. 지금은 Waterfall이랑 Iterative만 남아있다고 봐야함
+*. 개발프로세스와 개발방법론은 "다른" 거
+*. 유니파이드 프로세스는 C는 안됨, 객체지향임
+
+Procedural Programming
+ - 객체지향과의 비교
+ - 알고리즘과 데이터의 사용이 중요
+
+SASD
+ - 탑다운, 디바이드 엔 퀀커
+
+Object-Oriented Program
+ - OOAD
+ - CMMI 
+
+OOA - Domain Model
+ - Attribute는 있지만 Operation은 없음
+ - Operation이 있으면 Design단계임
+OOD Static Model - Class Diagram
+OOD Dynamic Model - Sequence Diagram
+ *. 위 세가지가 빙글빙글 돌아서 디자인이 나와야 함
+
+OOAD
+1. 젤 처음 Use Case 기반으로 디자인
+2. Domain Model 작성
+3. Use Case를 하나 꺼냄
+4. 그담에 Sequence Diagram을 작성함
+5. 그리고 나서 Operation과 함께 Class Diagram을 작성
+돌고돌고
+ - 한번에 끝나면 Waterfall
+ - 돌면 Iterative
+ - 더돌면 Agile xp
+ - 빡쎄게 돌면 Unified Process
+
+
+수요일 실습
+ - 설계된대로 Skeleton 코드가 작성되면
+ - Sequence Diagram을 보고 해당 Operation을 채워넣음
+
+*. OO는 하면할수록 복잡함 사기다!
+encapsulation과 information hiding이 잘 되어있으면,
+Maintanance가 쉬워진다.
+잘 작성되면 다른 구현에 영향을 주지 않을 수 있기 때문
+
+
+Unified Process
+ - RUP : 서버에 DB, Configuration 등등이 다 있었음, 전세계의 Best Practice를 다 볼 수 있음, 현재 CI라 할 수 있음
+ - 3주마다 돌아가는 코드가 나옴 (점진적으로 개발되며, 요구사항이 바뀔 수 있음)
+ - 단계(Phase) : 인셉션 일레보레이션 컨스트럭션 트랜지션
+*. 다음주 목/금에 Requirement 관련실습 해볼꺼임
+
+elaboration Phase : 고객이 ㅇㅋ할때까지 돌아가는 산출물이 나오면서 빙글빙글..
+User-Case : FR (Functional Requirement)
+Supplementary Specification : NFR, 
+*. 기능 비기능 모든 항목(quality)을 다 뽑아낼 수 있어야 함
+
+OOAD 설계순서 (계략적)
+- Detail하게 계속계속 Use Case를 작성함
+- 거기에 매칭되는 System Sequence Diagram을 작성함 (이건 User와 System간의 관계)
+- 위 내용을 계속 Iterative하게 돌아가다가(요구사항변경포함) OK가 되고 나면,
+- 얘네를 기반으로 Domain Model을 작성함 (Operation은 없음)
+- Domain Model을 기반으로 Sequence Diagram을 작성함
+- Sequence Diagram을 기반으로 Class Diagram을 작성
+
+UML
+- Sketch
+- Blueprint(청사진) : 표준화된 문법을 통해 정확히 이해할 수 있어야 함 (OOAD는 설계자와 구현자가 다를 수 있다고 가정함)
+
+UML 2.0
+- 13가지 Diagram을 Sketch Level로 사용함 (Class Diagram Rotation을 사용함)
+- Class Diagram Notation에서는 Italic 폰트가 Abstract Class 임
+- 빨강네모 : 무조껀 사용, 보라색 : 쓰긴 쓰게 될텐데 Optional
+*. 결국 AA과정은 Architecture Description을 작성하는겁니다.
+
+Inception
+- 기능 (use case) <<중요>>
+- 비기능 (supplementary specification) - 다음주
+- vision, glossary : 비지니스 관점에서 비용, 기간 등등
+
+Use Cases
+- 일단, Text Stories로 시간순서대로 쭉 작성
+- 이름을 잘 적어야 함 : 시스템을 사용하는 목적이 잘 드러나게
+- 이름은 항상 동사, 명사로 진행
+ - Brief : 완전 간단하게 쭉 (ex> 27p, Process Sale) -> 팀원들끼리 빠짐없이 Discussion 하는게 첫번째 실습
+ - Causal : Preconditions, Success Guarantee, Main Success Scenario, Extensions(Alternate Scenario, Exceptional Scenario) 등이 필수작성됨
+ - Fully-Dressed
+
+Star UML
+*. 채흥석 교수님은 EA를 좋아함
+*. Sequence Diagram에서 Object는 소문자로 시작
+
+
+Inception 실습
+ - Functional Requirements + Use Case가 가장 중요 (전체시간의 95%차지)
+ - Functional Requirement : 주어가 우리 시스템
+ - User Case : 주어가 External Actor 임, Numbering을 꼭 해줘야 나중에 안헷깔림
+  - Evident Category : User Action
+  - Hidden Category : System Action
+
+전자시계
+기본기능 : 
+ - 시간모드
+  - 시간설정모드 (시, 분, 초)
+ - 날짜보기모드 
+  - 날짜설정모드 (월, 일)
+ - 스탑워치모드
+  - 시작, 멈춤, 리셋
+ - 알람내역보기모드
+  - 알람설정모드 (시, 분, 초)
+
+*. 알람상태에서 냅두면 3분있다가 기본모드로 돌아오는거 있다고 할께요
+
