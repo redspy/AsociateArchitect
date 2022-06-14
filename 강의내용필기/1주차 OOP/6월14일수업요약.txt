@@ -1,0 +1,36 @@
+OOAD 설계단계에서는 기능적 Qulity만 확인한다. (비기능은 요구공학에서)
+*stakeholder : 이해관계자
+
+Evident는 Actor Activating의 뜻으로 해석해야함
+Use Case 참고내용 : 
+ - Ack Timer : 알람이 울림
+ - Snooze기능
+ - 알람의 반복여부 셋팅
+ - Stop인지 Pause인지 명확하게
+ - 공통기능은 밖으로 빼서 사용할 수 있음 <
+
+*. NFR - 오차가 없는 디지털 시계를 개발한다.
+*. 오차범위를 NFR에서 설정 (0.1초 등)
+
+Fully Dressed Style
+- Stakeholders를 나열하고, 각각 당사자가 어떤거에 관심있는지가 가장 중요
+- Main Success Scenario는 가장 기본적인 시나리오를 기술함
+- Extensions(or Alternative Flows)에는 중간에 발생할 수 있는 모든 예외사항을 기술
+- 모든 시나리오 도출이 아키텍트의 몫은 아님, 요구사항 담당부서와 개발자가 
+
+실습
+1. Use Case Refine
+2. Domain Model 작성
+3. Traceavility Table 만들기
+
+Use Cases(Refined)
+Type : Evident / Hidden
+Typical Courses of Events : Main Scenario
+
+System부분에 결국 Object 들이 옆에 적을 예정
+
+<실습> Use Case -> System Sequence Diagram -> Traceavility Table -> Domain Model
+->
+Use Case를 기준으로 Domain Model을 참고해서 Sequence Diagram을 작성한다.
+Sequrnce Diagram을 작성한 뒤, 거기서 발생한 함수 및 파라미터 등을 가져와서
+Class Diagram을 작성한다.
