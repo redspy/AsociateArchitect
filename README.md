@@ -1,6 +1,7 @@
 # Asociate Architect
 
 * Naver Cafe 주소 : https://cafe.naver.com/pink56g5t
+* Design Pattern 참고주소 : https://refactoring.guru/design-patterns
 * Google Docs
   * 전자시계설계
     * UseCase(Word) : https://docs.google.com/spreadsheets/d/12XwoXteedaM5S7rsAnJCEks1E5lsvWVYD08lt9elDBA/edit?usp=sharing
