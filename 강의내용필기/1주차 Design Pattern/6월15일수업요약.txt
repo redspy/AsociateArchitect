@@ -1,0 +1,81 @@
+금일은 Command Pattern까지 확인해보는 시간을 가짐
+
+Day2
+- Visitor Pattern이 GOF 에서 가장 중요하다고 할 수 있다.
+- Facade Pattern은 컴포넌트의 인터페이스 설계시 자주 쓰이는 패턴
+- Decorator, Composite 패턴은 실습으로 확인해봄 JAVA로..
+- Holub's Database Project 책에 있는 코드를 가지고 코드분석 시간을 가짐
+* 두번째날은 시계만들었떤 Class를 가지고 패턴을 적용하는 실습을 함
+
+Day3
+- Pattern Hatching : 작은 패턴들이 모여서 어떻게 작동하는지 확인
+- GOF의 Lexi System예제를 가지고 확인해봄
+- Maze Problem에서 각각 두가지의 패턴이 어떻게 적용되는지 확인
+
+Factory Method, Abstract Factory 
+ : 둘이 비슷하지만 Scope입장에서는 Class와 Object로 나뉜다.
+ : Abstract Factory 는 객체를 바꿔끼우기만 하면 해당 Theme의 객체로 동작하는 개념
+ : Director가 없음
+Builder
+ : Abstract 와 비슷하게, 여러 객체들을 만들어내는 인터페이스 제공
+ : Abstract의 Create Method는 Client를 위함이지만,
+ : Builder의 Interface는 Director의 호출을 받아 조립하고자 하는 파트들을 구성하는 인터페이스(Director를 위함)
+ : 클라이언트에게 Object 형식으로 던저주는게 목표
+ : GetProduct 등을 통해 완성된 Product을 제공
+Singleton
+ : Object의 갯수를 제한하는 패턴
+
+Adapter
+ : 두 호환성이 결여된 클래스를 연결해주는 패턴
+Bridge
+ : 컨셉, 인플리멘테이션
+ : 두 계층을 하나로 합치고자 하는 시도
+ : 중간에 인터미디어트한 조합만큼 중간 클래스가 만들어짐
+Composite, Decorator
+ : 리커스브한 컴포지션
+ : 트리처럼 무한히 반복되는것 - Composite
+ : 기존객체를 새로운 객체가 애워싸듯 동작 - Decorator
+
+Template
+ : 차 끓이고, 커피 끓이는 예제
+ : 두 알고리즘이 유사할 때 템플릿을 만들고,
+ : 변경점을 하위클래스에서 일부 재정의 하도록 함
+Iterator
+ : SRP가 잘 강조된 패턴
+ : 순환방문을 잘 할 수 있게 해주는 패턴
+ : 컬렉션과는 다른 개념
+ : 기존 에그리게잇 객체를...
+Mediator
+ : Observer처럼 커뮤니케이션과 관련된 패턴
+ : 독재자처럼, 관제탑처럼
+ : Observer는 상태변화를 확인하여 Publish, SubScribe 등의 방법으로.
+ : Observer와 장단점이 반대였음
+State, Strategy
+ : 비슷하지만 의도가 다름
+ : State는 동작하는 상태가 자주 변경됨
+ : Strategy는 바뀔 수는 있지만, 바뀐 알고리즘이 지속적으로 사용됨
+
+패턴간의 관계
+- Composite으로 모델링된 트리구조를 하나씩 돌고 싶으면(enumeration) Iterator를 사용
+- Builder로 만들어낸 대상은 컴플렉스 오브젝트가 되고, 이를 계층적으로 표현하고자 하면 Composite을 사용함
+- Composite에 있는 객체를 새로운 책임을 부여하고 싶으면 Decorator를 사용함
+- 기존객체를 새로운객체로 둘러싸서 알고리즘등을 바꿔끼울 수 있다면 Strategy를 사용하여 본질을 바꿈
+- Decorator는 표면을 바꾼다는 개념이 강함
+- Strategy는 알고리즘을 바꾼다면 Template Method 알고리즘의 특정 스텝을 하위클래스에서 재정의하여 골격은 유지한다.
+- Factory Method는 Template Method와 구조는 같음, 서로 목적이 다름
+- Factory Method는 Product을 만들어내는데 특화되도록 함
+- Abstract Factory은 Factory Method를 만들어내는 방법에 관한내용
+- Factory의 Object을 여러개 만들지만, Singleton을 통해 공통사용
+- Observer를 사용하면서도 관계를 정리하고자 할 때 Mediator를 사용
+
+- Visitor Pattern : 주어진 객체 외부의 관계를 정의함
+- Iterator, Composite, Visitor 는 자주 같이 쓰이는 친구들임
+
+
+Abstraction (추상화)
+- 컴퓨터 공학에서 가장 많이 사용되는 용어중 하나
+- 디테일을 감추고, 본질만을 파악해서 풀게되고, 복잡한 SW를 단순화 시킴
+- 특정한 Implementation으로 부터 본질을 뽑아냄
+- 공통적으로 사용이 가능함
+- 불필요함을 제거하면서 문제를 작고 해결 가능한 수준으로 만들어가는 과정
+
