@@ -79,3 +79,52 @@ Abstraction (추상화)
 - 공통적으로 사용이 가능함
 - 불필요함을 제거하면서 문제를 작고 해결 가능한 수준으로 만들어가는 과정
 
+Information Hiding and Encapsulation
+- Information Hiding : Encapsulation << 강의에서는 동일한 단어로 사용함
+  = Principle : Technique
+
+Soc(Separation of Conserns)
+- 다익스트라가 제안한 개론
+- 프로그램에 영향을 주는 모든종류의 정보
+- 모듈러러티와 인캡슐레이션과 관련이 깊음
+- 하나의 모듈이 여러 컨선(관심사)을 한꺼번에 가지고 있다면?
+ 
+Modularity
+- 프로그래머가 감당해야하는 전체의 복잡도를 줄일 수 있음
+- 유사한 기능을 수행하는 부분은 비슷한 곳에 : Separation of Conserns
+- 작고, 간단하고, 잘 정의된 인터페이스로 디자인 함 : Information Hiding
+
+Coupling(결합도) : 두 모듈의 디펜던시
+Cohesion(응집도) : 엘리먼트들이 얼마나 강하게 결합되어 있는가
+
+Cohesion
+ : 엘리먼트가 얼마나 단일 목적 혹은 관련성이 깊에 정의되어 있는가
+
+
+Command Pattern
+ : 객체에 대한 요청을 인캡슐레이션 한다.
+ : Request를 보관하던지, 나중에 수행한다던지 할 수 있음
+ : 명세, 실행 순서를 바꿀 수 있음
+ : 예제-> History를 Redo, Undo 하는 기능
+
+Without Using Command Pattern
+ : if(commad == slot1on) { light.on(); }
+ : else if (command == slot1off) { light.off(); }
+ : 이런식이면 버튼에 연결된 제품을 바꿀때마다 코드가 바뀜
+
+Command Interface
+ : 표준화된 execute() 라는 함수를 인터페이스로 묶어두고,
+ : 때에 따라 필요한 객체를 주입하여 execute() 로 실행되도록 함
+ : 예를들어 이미지 프로세싱 알고리즘을 순서와 관계없이 실행할 수 있게 하는 것과 동일함
+
+ : 객체의 요청이 숨겨져 있음
+ : Invoker는 Receiver를 모르는 상태로 해당 Action을 수행할 수 있음
+
+
+Command Pattern VS Strategy pattern
+두 패턴 모두 독립적인 가변성을 제공하기 위해 코드와 개별 ​​작업에 대한 매개변수를 포함하는 원래 클래스에서 다른 개체로 인수분해하는 것을 포함합니다. 차이점은 실제로 발생하는 사용 사례와 각 패턴의 의도에 있습니다.
+Strategy - Quicksort or Mergesort [algo change]
+Command - Open or Close [action change]
+Receiver에게 내릴 명령을 객체화할땐 커맨드를 관리하고
+행위 객체의 행동에 대한 로직을 분리하고자 하면 Strategy인
+게 아닐까 싶습니다
