@@ -1,0 +1,40 @@
+Command Pattern
+ : 명령을 객체화 시킴으로써 Encapsulation한다.
+
+ Visitor Pattern
+ : Set of Object(Collection)에 하나 이상의 Operation을 적용하고 싶다면,,,
+ : GRASP에 근거하여 각각의 위치에 배치해야 함
+ : 하지만,
+ : 어떤 이유에서 object structure에 두고싶지 않은 경우!! Visitor Pattern을 사용한다.
+*. Grasp-> Information Export ?
+ : 필요한 곳에 해당하는 Responsibility를 정의해라
+ : Data가 있는곳에 Operation을 정의해라.
+
+예제 : Abstract Syntax Tree
+*. Composite 패턴을 이용해서 Tree 구조로 모델링 할 수 있음
+
+<실습> Visitor Pattern에서 중복코드 없애기
+
+Visitor Pattern의 장점
+ : 새로운 Operation의 추가가 쉽다.
+ : Visitor 단위로 새로운 Operation 추가
+ : 만약 기존처럼 각 Class에 Operation이 추가된다면, 코드의 Scattering, Tangling 이 일어남
+ : 모듈화에 큰 도움을 줌
+ : 관련된 Operation이 하나의 Visitor에 들어갈 수 있기 때문
+Visitor Pattern의 한계
+ : Concrete Element가 추가되기 힘든 구조이다.
+ : Abstract Factory와 마찬가지로 새로운 Product이 추가되기 힘듬!
+
+ Holub on Patterns
+ : 가장 깊이있는 패턴책
+ : 규모있는 프로그램의 패턴의 예제가 있음
+ : 여러 패턴들이 혼용되어있는 형태의 예제가 2개 있음
+
+
+조별과제
+1. 빌더패턴이 적용된 Table Exporter, Table Importer에
+HTML을 추가하는 실습 예정
+
+2. 기존 Class Diagram 에서, 총 5개의 설계패턴이 들어가도록
+버튼위치를 바꿀 수 있도록 패턴설계
+월드타임을 가져오기 쉽게 패턴설계
