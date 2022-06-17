@@ -1,2 +1,55 @@
 <조별발표시간> - 2시간 소요
 
+금일강의
+- Proxy Pattern
+- Facade Pattern
+
+
+Proxy Pattern
+ : 다른객체에 대한 Access Control
+ : Cache 의 역할, Remote Object를 Local 객체처럼,
+ : 실제 Subject랑 Proxy가 동일한 객체를 구현하고 있음
+ : 사용하는 Client의 입장에서는 RealSubject를 쓰는건지 Proxy를 쓰는건지 모름
+ : 실제로는 Proxy가 받아서 RealSubject를 호출하는 구조는
+ : 쁘락찌 << 의 의미가 맞음
+
+ : Subject : Interface
+ : RealSubject : Subject가 대표하고 있는 실제 객체
+ : Proxy : RealSubject에 대한 Access를 담당, Cache담당 등
+
+ : 최초 Access Control을 위해 만들어졌지만,
+ : remote proxy - remote 객체와 통신하기 위한 proxy, 마치 Local객체 인것처럼
+ : virtual proxy - cache의 역할, remote객체가 느린경우 뭔가를 해볼 수 있음
+ : protection proxy - access control에 충실, access permission 관리 등을
+
+ : 어려운점 : 실제 구현!!
+
+ Chain Of Responsibility Pattern
+
+ ProtoType Pattern
+  : Client는 자기가 생성하고자 하는 객체를 prototype 형태로 가짐
+  : Prototype의 clone() 이라는 함수를 통해 ProtoType 객체를 가져옴
+  : Client - clone을 통해 객체를 가져오는 소비자
+
+
+Abstract Factory Pattern
+ : Factory Method를 가지고 있는 여러 Class를 이용해서,
+
+Facade Pattern
+ : 일반적인 구현에서 SubSystem을 만들어서 복잡도를 낮추게 됨
+ : 밖에서 Client입장에서 보면 API가 방대해서 사용하기 어렵게 됨
+ : 단일한, 단순한 Interface를 제공함으로써, SubSystem의 사용을 쉽게 만듬
+ : Implementation과 SubSystem간의 결합도가 낮아지도록 할 수 있음
+ : 하지만! 모든 SubSystem을 Access 하지 않는다.
+ : SubSystem을 감추는 개념은 아니고,
+ : SubSystem을 일반적으로 사용하는, 하지만 복잡한 Uses를 Facade로 만듬
+ : 새로운 기능을 제공하지는 않음.
+ : 사용하기 편리하게 만드는 역할!!
+
+ : Adapter Pattern과 비슷하지 않은가!?
+ : Adapter->이미 존재하는 클래스가 있다 Facade->이미 존재하는 클래스가 있다
+ : Adapter->만족해야 하는 Interface가 미리 정해져 있음 Facade->필요한대로 Interface를 만들어낼 수 있음
+ : Adapter->단순화의 개념으로 만드는게 아님 Facade->Interface의 단순화가 요구되는 경우
+
+ Composite Pattern : 계층적인 구조
+ 
