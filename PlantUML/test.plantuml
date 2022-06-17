@@ -1,0 +1,55 @@
+@startuml testUML
+
+title plantUML Test
+
+
+interface Family {
+	+age : int
+	+int getAge()
+}
+
+class Minsu {
+	+int getAge()
+	+string getGender()
+}
+
+class Soul {
+	+int getAge()
+	+string getGender()
+
+}
+
+class Daul {
+	+int getAge()
+	+string getGender()
+}
+
+class insook {
+	+int getAge()
+	+string getGender()
+}
+
+class Minsu_Computer {
+
+}
+
+class Really
+class GrandFather
+class GrandMother
+class Ant1
+class Ant2
+class Ant3
+
+Family<-down-Minsu
+Family<-up-Soul
+Family<-up-Daul
+Family<-down-insook
+Minsu<-up-Minsu_Computer
+Soul<-up-Really
+Family<-down-GrandFather
+Family<-down-GrandMother
+Family<-down-Ant1
+Family<-down-Ant2
+Family<-down-Ant3
+
+@enduml
