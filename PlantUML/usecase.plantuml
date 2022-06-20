@@ -1,0 +1,25 @@
+@startuml
+
+title Use Case Diagram 
+
+:User:
+
+
+rectangle Cases {
+    (1.Timeout기능) as u1
+    (2.시간표시 Format) as u2
+    (3.모드전환) as u3
+    (4.취소버튼) as u4
+    (5.배터리방전) as u5
+    (7.TimeKeeping기능) as u7
+    (8.시간설정 진입) as u8
+}
+User-right-u1
+User-right-u2
+User-right-u3
+User-right-u4
+User-right-u5
+User-right-u7
+User-right-u8
+
+@enduml

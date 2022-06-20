@@ -1,0 +1,128 @@
+Report 작성시
+ : UML 표준으로 나와있는 Diagram을 최대한 활용하는걸 좋아한다.
+ : 설계 원칙이 충족될 수 있도록 설계해야 한다.
+
+Report 주제!
+ : 아파트 공동 출입문 출입관리 시스템
+ : 이해관계자 - 입주민(방문가구, 그 외, 가족구성원각각의 특성), 관리실, 방문자(개별, 정기)
+ : 카드키도 고려, 차량이 들어왔을때 뭔가 할수있느것 확인
+ : 각 세대별 비번 고치기 가능
+ : 벨을 눌렀을때 화면녹화, 로깅기능 등등
+ : 여러 아파트에 여러 단말기가 사용 가능하도록 등록가능
+ : 아파트 관리자는 한 아파트에 그룹별로 여러명일 수 있음
+ : 아파트 관리자는 세대별 얼굴 등록, QR코드 등록 등등
+ : 거주자는 방문자 QR코드를 발급하여 공유 가능 (제한적)
+ : 혹시나 여유가 된다면 개인정보<< 관련한 제약도 추가?
+ : 많이 하는것 보다는 정확하게 하는게 중요
+ : 방문자 QR은 문자로 이미지를 전달받음 (따로 구현 안함)
+
+Architectural Design 개요
+
+소프트웨어 설계
+
+Architectural Drivers
+
+Strategy Pattern
+*. OCP : 기존의 코드는 변경하지 않으면서 새로운 코드를 확장할 수 있음
+ - 면접때 SOLID에 관련한 질문을 많이 함. 이해도를 확인할 수 있는 대답을 해야함
+*. DIP : 직접 접근하지 않고, Interface를 통해 접근! Implementation에 의존하지 말고 Interface에 의존하라.
+ - Context 입장에서는 Interface에 의존함으로써 변경점이 생기지 않을 수 있음
+
+Diversity of Systems
+ : 이해관계자에 따라 바라보는 관점이 다르다.
+ : 사용자, 설계자 등등
+ : 하나의 시스템에 사용자 유형이 다양하고 사용자마다의 Needs가 모두 다름
+ : 서로 상충되는 부분들이 발생할 수 있음
+
+Differences
+ : Scale - 비용의 한계로 무작정 늘릴 수 없음
+
+ *. 소프트웨어 개발단계
+  : 요구사항분석->설계->구현
+  : Use Case단계에서 SW 규모를 산출할 때는 Use Case 별로 가중치를 둬서 계산
+  : Asociation, Relation 을 통해서 Use Case를 가지고 규모산출 가능
+  : Use Case Scenario 도 잘 사용해야 함
+  : 설계단계에서는 Class별, Operation별 갯수를 가지고 가중치 계산이 가능
+  : Module의 갯수, Component의 갯수 등등이 설계단계에서 규모 선정의 기준이 될 수 있음
+
+Foces in Software
+ : NFR은 QA(Quality Attributes)와 Constraint를 한번에 부르는 말임
+ : 요구사항은 Functional Requirement와 NRF을 합친 말이 되겠음
+
+Design
+ : Stackholer에게 설계결과물을 통해 구현전에 설명이 가능하도록 함
+ : Requirements Specification에는 Funtional Requirement, Non Funtional Requirement, Constraint를 다 포함해야 함
+*. 설계 : 요구사항이 충족될 수 있는 시스템의 구조를 정하는 작업
+  : SW Elements를 정의하는 과정
+요약
+ : 설계는 Requirement를 바탕으로 모든 요구사항을 달성할 수 있도록 System의 요소를 결정하고,
+ : 각각의 요소 Interface를 작성하고, 해당 요소의 실체(Component, Module, Class 등등)
+
+용어
+ : Architectural Design = High Level Design
+   - 
+ : Detaild Design = Low Level Design
+   - Class내부의 내용, 구조, 관계 등
+
+참고할 책 : Software Architecture in Pratice
+
+(?) What is Architecture : 요구사항을 충족할 수 있음 구조(Structures)의 집합, 여러개의 뷰로 구성
+ : 몇개의 뷰인지는 표준화 되어있지는 않지만 이번 과제에서는 4개만 사용
+ : 각각의 View는 System에 대한 해석을 하는데 도움이 되기 위함임
+
+Architectural Driver
+ : 아키텍쳐 설계를 하는데, 내용을 식별하기 위해 영향을 미치는 것들
+ : 전체 요구사항 중에 아키텍쳐 설계를 할 때 충족되어야 하는 요구사항들!!
+ : Use Case Scenario, Quality Attributes Scenario, Constraint 등
+ : 대부분의 Constraint는 Architectural Driver에 포함된다. 
+ : 모든 Quality Attributes는 Architectural Driver에 포함됨
+
+
+ *. SOLID 원칙
+  - SRP(Single Resposibility Principle) : 단일 책임 원칙 / 한 클래스는 하나의 책임만 가져야한다.
+  - OCP(Open Close Principle) : 개방-폐쇄 원칙 / 확장에는 열려있고 수정에는 닫혀있어야한다.
+  - LSP(Liskov Substitution Principle) : 리스코프 치환 원칙 / 프로그램의 객체는 프로그램의 정확성을 깨트리지 않으면서 하위타입의 인스턴스로 바꿀수 있어야한다.
+  - ISP(Interface Segregation Principle) : 인터페이스 분리 원칙 / 특정 클라이언트를 위한 인터페이스 여러개가 범용 인터페이스 하나보다 낫다.
+  - DIP(Dependency Inversion Principle) : 의존관계 역전 원칙 / 추상화에 의존해야하고 구체화에 의존하면 안된다.
+
+품질요구사항은 기능별로 세부적으로 기술되어야 하며, Measure 할 방법과 기준도 필요하다.
+
+
+Complete Quality Attribute Scenarios
+ - Stimulus
+ - Artifact
+ - Response
+ - Response Measure
+
+Constraint
+ - 비지니스 측면, 기술적 측면에서 고정되어 설계할 수 있는 항목
+
+4가지 View를 통해 Architectural Driver를 작성함
+ - System Infrastructure View : Node들간의 관계
+ - Structure View : Component - Class 들간의 관계
+ - Behavior View : Component instance
+ - Deployment View : Artifact (실행파일 등)
+
+
+System Infrastructure View
+ - Node는 육면체로 표현함
+ - Constraint, 성능, 가용성 등을 파악할 수 있음
+Deployment View
+
+Behavior View
+ - Component의 Instance가 Message를 주고받으면서 Use Case를 만족하는 모습 설계
+ - Sequence Diagram 작성
+
+Structure View
+ - 기능적 요구사항을 확인할 수 있음
+ - 성능, 가용성을 어느정도 확인이 가능하다.
+
+Top Level design
+ - 4가지 View를 모두 작성한다.
+Component Level Design
+ - Component의 구조, 동작 등을 상세 설계
+*. Structure View의 실선 : 컴포넌트가 인터페이스를 Realization 한다.
+
+*. 작성시 모든 Component에 대해 Class Diagram이 나와야 하지만, 몇개만 선정하여 작성할 예정
+
+*. Tactics : 특정 품질 요구사항을 달성하기 위한 설계기법

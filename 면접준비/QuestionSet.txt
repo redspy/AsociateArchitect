@@ -1,0 +1,84 @@
+Question Set
+ Architectural driver
+ What is architecture driver?
+ Give a few specific examples of architectural drivers for a 
+system OOO
+ How can you make sure that the architectural drivers are 
+reflected into the architecture design?
+2
+ Use Case
+ What is use case model?
+ What are criteria for identifying good use case?
+ QA Scenario
+ What are the six parts for describing a quality attribute?
+ Give a specific example of QA Scenario for a QA such as 
+performance
+3
+ Component
+ What is component?
+ What is the difference between classes and components?
+ What is the difference between components and packages?
+ What strategies can be used for performing 
+decomposition?
+ Tactics
+ What is tactics?
+ What is the difference between tactics from patterns?
+ Give a few specific examples of tactics for performance
+ Give a few specific examples of tactics for available/reliability
+4
+ Architectural Patterns
+ What is architectural pattern?
+ Give a couple of examples of architecture patterns? What are 
+the advantages of those patterns?
+5
+ Design Patterns
+ What is design pattern?
+ For what are GoF Patterns used? That is, What quality can be 
+achieve through GoF Patterns?
+ Strategy pattern
+ What is strategy pattern?
+ What is the difference between strategy pattern and command 
+pattern?
+ What is the difference between strategy pattern and state pattern?
+ What is the difference between strategy pattern and observer 
+pattern?
+ Template method pattern
+ What is template method pattern?
+ What is the difference between strategy pattern and template 
+method pattern
+6
+ Factory method pattern
+ What is factory method pattern?
+ What is the difference between factory method pattern and 
+abstract factory pattern?
+ Façade pattern
+ What is Façade pattern?
+ What is the difference between Façade pattern and mediator 
+pattern?
+ What is the difference between Façade pattern and composite 
+pattern?
+7
+ Cohesion
+ What is it?
+ How to measure it for a function, a class, a package, and a 
+component?
+ Coupling
+ What is it?
+ How to measure it for a function, a class, a package, and a 
+component?
+ SOLID
+ What is OCP?
+ How to achieve OCP?
+ What is SRP?
+ What is the difference between SRP and cohesion?
+ What is DIP?
+8
+ Refactoring
+ What is the goal of refactoring?
+ Give a few refactorings to improve cohesion of classes
+ Give a few refactorings to improve coupling of classes
+ What is the difference between the following refactorings
+ Replace type code with class
+ Replace type code with subclass
+ Replace type code with state/strategy
+9
