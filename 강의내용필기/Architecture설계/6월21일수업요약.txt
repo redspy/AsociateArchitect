@@ -1,0 +1,36 @@
+*. BP경로 : https://drive.google.com/file/d/1Oi9bdwrywM8kdIVz1XfQTqCSpOgS5z5G/view?usp=sharing
+아키텍처 요구사항 작성 가이드
+
+2장은 Project에 대한 overview
+ - 이해관계자의 골 (비지니스 측면)
+ - 시스템이 언급되지 않음
+ - 시스템과 무관하게 비지니스 적인 목표!
+
+3장은 비지니스 골을 위해 어떤 시스템을 만들 것인가
+ - 시스템 중심에서의 Feature
+ - 2장에서의 이해관계자의 목표를 달성하기 위해 시스템이 어떤일들이 되어야 하는지
+
+4장은 System Feature를 세분화 해서 기능과 품질수준을 명세함
+
+
+2장.Project overview
+ 2.1 Project Background
+ 2.2 Business Context Diagram
+ 2.3 Stackholder List
+ 2.4 Business Goal List
+*. 2장에서 정의할 내용! Stackholder별 Business Goal
+
+System Context Diagram
+ - User Case Scenario에 있는 용어가 Diagram에 표현이 되어야 한다.
+ - Diagram에서의 선이 데이터의 Flow 역할을 해야한다.
+
+External Entity List
+ - 각 External Entity에 대한 특성이 서술이 되어야 한다.
+ - 제품마다의 특성이 조금씩 다르다는 내용을 External Entity에 서술해야함
+
+
+Use Case Specification
+ - Use Case 시나리오는 작성
+ - 기본시나리오(Basic)에 대해서만 Pre-Condition, Post-Condition, Flow of Events 를 작성한다.
+
+*. 수업내용이 복잡함. 일단 interim Report 까지는 BP 사례를 토대로 작성해야 할 것 같음
