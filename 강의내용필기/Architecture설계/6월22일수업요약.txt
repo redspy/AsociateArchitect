@@ -1,0 +1,50 @@
+Top Level Design Description
+
+- Node의 이름은 역할과 QA가 이해될 수 있도록 작성
+
+Structure View
+ - Design Elements
+  - 반원 : Required Interface
+  - 원 : Provided Interface
+  - 네모 : Port
+
+Documenting Design Decisions
+ - 이 부분은 설계에 대한 배경내용이 잘 나와야 한다. (매우중요)
+ - Top level Design Description 작성시 5.5항목 먼저 작성하는게 좋음
+ 
+ *. 면접
+ - 자기소개해보세요
+ - 가장 고민을 많이한 품질요구사항을 말씀해보세요
+  - QA Scenario 하나를 골라서 소개를 해야함
+ - 성능요구사항을 달성하기 위한 설계를 어떻게 했는지?
+  - 각 View를 보여주면서 설계결과를 보여주고, Design Decision을 보여주면서 왜 이렇게 설계하게 됐는지를 설명
+ - The software architecture of a system is the set of structures
+  - Infrastructure View(Node), Structure View(Conponent), Behavior View(instance), Deploment View(file)
+  - 각 관심사가 다르기 때문에 view 별로 다르게 표현함
+ - 설계의 목표 및 가용성, 성능을 분석하기 위함
+  - Architectural Drivers가 잘 해결이 되었는지를 확인
+
+
+**. 설계과정 해석
+ - 2장 : Project overview
+  - 프로젝트의 전반적인 내용 정리
+  - 내용에 따른 Stakeholder 도출
+  - Stakeholder별 시스템을 사용하는 배경 설명
+  - Stakeholder별 Business Goal 도출
+ - 3장 : System overview
+  - System과 External Entity간 관계도 작성
+  - External Entity List 도출 (User, System, Device, DB Server 등)
+  - System Feature List 도출 
+   - Business Goal에 도달하기 위한 Feature
+   - External Entity간 통신을 위한 Feature
+ - 4장 : Architectural Driver
+  - Use Case Model 작성
+  - Use Case List에대한 Description 작성
+  - Quality Attribute Scenario 도출
+  - QA List에 대한 Description 작성
+
+ - 5장 : Top Level Design Description
+ - 6장 : Component Level Design Description
+ - 7장 : Architecture Evaluation
+
+ 채흥석교수 : hschae@pusan.ac.kr
