@@ -1,1 +1,31 @@
 요구공학
+*. 잘못이해되는 부분을 해결하기 위한 공학
+
+ - System services : FR (기능요구사항)
+ - Constraints : NFR (비기능 요구사항) - QA포함
+
+ : 가장중요한 산출물 : SRS !
+
+Rational Unified Process : 현재 산업표준의 요구공학
+
+Requirements Change Management, Requirements Validation : 얘네는 내용이 많지가 않으며, CI(Continus Integration)단계라고 할 수 있음
+Requirements Discovery : 보물찾기 처럼 어렵다!
+
+Completeness : 빠진게 없어야 한다. 더있어도 안됨
+Consistency : 일관성이 있어야 한다.
+
+
+*. Stakeholder : 사용자, 거주자, 경비원, 방문자, 시스템관리자, 배달직원, 서버관리자, 단말기관리자, 관리소장, 네트워크 관리자, SW개발자, 개인정보관리자, 119, 112?, 전기끊기면? 한전?
+
+ : Stakeholder는 요구사항이 두리뭉실할 가능성이 높음
+ : Stakeholder analysis : Stakeholder를 찾는 과정
+
+
+WinWin
+ : EasyWinWin 이라는 툴 사용
+
+<실습>
+1. Role Playing : 각자 두가지정도 Role을 정해서 본인이 원하는 goal과 희망사항을 적어본다.
+ - Stakeholder : 거주자, 방문자, 운영자, 아파트관리자, SW개발자, 
+
+https://docs.google.com/spreadsheets/d/1DDbK1_Ex0EvKKeTIEB03UF6r6373uEaSeaN5xIccRNs/edit?usp=sharing
