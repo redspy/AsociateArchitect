@@ -10,6 +10,8 @@
   * 디자인 패턴
     * Class Diagram : https://docs.google.com/presentation/d/1Sg0xVdjbbAVaFrMbl8P702YXh9vPPmNsv4gsKiYlENw/edit?usp=sharing
     * HTML Exporter : https://docs.google.com/presentation/d/1V-omSEBycwRy4L4pcVH3OPdoMzZiS55SBU7sD4pMTQ4/edit?usp=sharing
+  * 요구공학
+    * Requirement : https://docs.google.com/spreadsheets/d/1DDbK1_Ex0EvKKeTIEB03UF6r6373uEaSeaN5xIccRNs/edit?usp=sharing
 * 시간표
 
 ![time1](https://github.com/redspy/AsociateArchitect/blob/main/%EC%8B%9C%EA%B0%84%ED%91%9C/%EC%8B%9C%EA%B0%84%ED%91%9C%201.jpg)
