@@ -53,3 +53,19 @@ Mini-QAW 단계:
 • QAS가 시스템 아키텍처에 미치는 영향을 고려합니다.
 6. 이해관계자와 결과 검토
 
+The QAW Steps in Detaild
+1. QAW 발표 및 소개
+– QAW 진행자는 QAW의 동기를 설명하고 방법의 각 단계를 설명합니다.
+2. 사업/미션 발표
+– 이해 관계자는 시스템의 비즈니스 및/또는 프로그래밍 방식 동인을 제시합니다.
+
+Complete Quality Attribute Scenarios
+ - Source : Developer
+ - Stimulus : Wishes to changes
+ - Artifact : User Interface
+ - Environment : At design time
+ - Response : Modification is made with no side effects
+ - Response Measure : in three hours
+
+Tactics
+ : QA를 만족하기 위해서 Architect가 시스템 수준에서 사용하는 기법
