@@ -1,0 +1,55 @@
+*. Goal Scenaroi를 위한 Requirement : NFR, Constraints
+
+Use Case 는 곧 FR
+
+*. Tatics : 
+
+
+<실습2>
+The system should have features such as Register, Sign-in, Sign-out.
+시스템에는 등록, 로그인, 로그아웃과 같은 기능이 있어야 합니다.
+
+The Driver should be able to view Passenger requests.
+운전자는 승객 요청을 볼 수 있어야 합니다.
+
+The system should accept orders through the internet.
+시스템은 인터넷을 통해 주문을 수락해야 합니다.
+
+The Customer should be able to designate the route in advance.
+고객은 사전에 경로를 지정할 수 있어야 합니다.
+
+The system should accept orders through SMS.
+시스템은 SMS를 통해 주문을 수락해야 합니다.
+
+The system should accept orders through the call center.
+시스템은 콜 센터를 통해 주문을 수락해야 합니다.
+
+Managers should be able to manage orders through the internet.
+관리자는 인터넷을 통해 주문을 관리할 수 있어야 합니다.
+
+Manager should be able to configure User profile through the call center.
+관리자는 콜 센터를 통해 사용자 프로필을 구성할 수 있어야 합니다.
+
+Data transfer between a taxi and traffic manager should be possible.
+택시와 교통 관리자 간의 데이터 전송이 가능해야 합니다.
+
+Manager should be able to configure User profile through the internet.
+관리자는 인터넷을 통해 사용자 프로필을 구성할 수 있어야 합니다.
+
+<실습3>
+Mini-QAW 단계:
+1. 미니 QAW 소개
+• 모든 팀 구성원에게 이해 관계자의 다양한 역할 할당
+• 고려 중인 시스템(SUC)의 전체 컨텍스트/경계 정의/공유
+2. 품질 속성 소개, 품질 속성 분류법
+• SUC와 관련된 4~6가지 품질요소 선정
+3. 시나리오 브레인스토밍
+• 4~6개의 원시 품질 속성 시나리오 식별
+• "시스템 속성 웹 탐색" 활동
+4. 원시 시나리오 우선 순위 지정
+• 5가지 시나리오를 선택하는 점 투표
+5. 시나리오 개선
+• 6개의 잘 정제된 QAS 생성
+• QAS가 시스템 아키텍처에 미치는 영향을 고려합니다.
+6. 이해관계자와 결과 검토
+
