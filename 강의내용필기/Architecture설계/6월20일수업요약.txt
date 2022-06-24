@@ -89,10 +89,12 @@ Architectural Driver
 
 
 Complete Quality Attribute Scenarios
- - Stimulus
- - Artifact
- - Response
- - Response Measure
+ - Source : Developer
+ - Stimulus : Wishes to changes
+ - Artifact : User Interface
+ - Environment : At design time
+ - Response : Modification is made with no side effects
+ - Response Measure : in three hours
 
 Constraint
  - 비지니스 측면, 기술적 측면에서 고정되어 설계할 수 있는 항목
