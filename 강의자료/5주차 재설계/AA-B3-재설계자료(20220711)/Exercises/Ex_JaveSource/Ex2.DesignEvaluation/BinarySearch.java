@@ -1,7 +1,7 @@
 import static java.lang.Integer.compare;
 
 public class BinarySearch {
-    public int binarySearch (char item, char table[], int n){
+    public int binarySearch (char item, char[] table, int n){
         int bot = 0;
         int top = n - 1;
         int mid, cmp;

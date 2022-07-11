@@ -1,0 +1,26 @@
+@startuml
+participant Actor
+Actor -> M : f
+activate M
+M -> Subject : addObserver
+activate Subject
+Subject --> M
+deactivate Subject
+M -> Subject : addObserver
+activate Subject
+Subject --> M
+deactivate Subject
+M -> Subject : changeState
+activate Subject
+Subject -> Subject : notifyObservers
+activate Subject
+Subject -> Observer : update
+activate Observer
+Observer --> Subject
+deactivate Observer
+Subject --> Subject
+deactivate Subject
+Subject --> M
+deactivate Subject
+return
+@enduml

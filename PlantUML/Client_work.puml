@@ -1,0 +1,22 @@
+@startuml
+participant Actor
+Actor -> Client : work
+activate Client
+Client -> Server : open
+activate Server
+Server --> Client
+deactivate Server
+Client -> Server : print
+activate Server
+Server -> Device : write
+activate Device
+Device --> Server
+deactivate Device
+Server --> Client
+deactivate Server
+Client -> Server : close
+activate Server
+Server --> Client
+deactivate Server
+return
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+participant Actor
+Actor -> Driver : run
+activate Driver
+Driver -> StringContainer : add
+activate StringContainer
+StringContainer -> StringContainer : init
+activate StringContainer
+StringContainer --> StringContainer
+deactivate StringContainer
+StringContainer --> Driver
+deactivate StringContainer
+Driver -> StringContainer : add
+activate StringContainer
+StringContainer -> StringContainer : init
+activate StringContainer
+StringContainer --> StringContainer
+deactivate StringContainer
+StringContainer --> Driver
+deactivate StringContainer
+Driver -> StringContainer : remove
+activate StringContainer
+StringContainer -> StringContainer : init
+activate StringContainer
+StringContainer --> StringContainer
+deactivate StringContainer
+StringContainer --> Driver
+deactivate StringContainer
+return
+@enduml

@@ -1,0 +1,35 @@
+@startuml
+participant Actor
+Actor -> VRUI : rentVideo
+activate VRUI
+VRUI -> Customer : getName
+activate Customer
+Customer --> VRUI
+deactivate Customer
+VRUI -> Video : getTitle
+activate Video
+Video --> VRUI
+deactivate Video
+VRUI -> Video : isRented
+activate Video
+Video --> VRUI
+deactivate Video
+create Rental
+VRUI -> Rental : new
+activate Rental
+Rental --> VRUI
+deactivate Rental
+VRUI -> Video : setRented
+activate Video
+Video --> VRUI
+deactivate Video
+VRUI -> Customer : getRentals
+activate Customer
+Customer --> VRUI
+deactivate Customer
+VRUI -> Customer : setRentals
+activate Customer
+Customer --> VRUI
+deactivate Customer
+return
+@enduml
