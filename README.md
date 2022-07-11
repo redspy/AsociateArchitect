@@ -16,6 +16,8 @@
     - 조별과제 : https://docs.google.com/presentation/d/14AWWXT7ogvyOis6_0QhV2f-l2l6K7Vj4zJ0tsbc3fX0/edit?usp=sharing
   - 아키텍처 평가
     - 조별과제 : https://docs.google.com/presentation/d/1yno5ATQCxnY_YjbOAQdpUgqeE1yRpFPAy5r3qcvovN4/edit#slide=id.g13b63321da2_1_86
+  - 아키텍처 재설계
+    - 조별과제 : https://docs.google.com/presentation/d/1haH2zu9ioT7J4ex6wOlzYXTJk7BxTM28FwYwWxM-yyc/edit#slide=id.p
 - 시간표
 
 ![time1](https://github.com/redspy/AsociateArchitect/blob/main/%EC%8B%9C%EA%B0%84%ED%91%9C/%EC%8B%9C%EA%B0%84%ED%91%9C%201.jpg)
