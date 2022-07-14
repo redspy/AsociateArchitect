@@ -1,12 +1,15 @@
 import java.util.Date;
 
 public class Video {
+	// Large Class ?
 	private String title ;
 
+	// type code를 enum으로 바꿀까?
 	private int priceCode ;
 	public static final int REGULAR = 1 ;
 	public static final int NEW_RELEASE =2 ;
 
+	// type code를 enum으로 바꿀까?
 	private int videoType ;
 	public static final int VHS = 1 ;
 	public static final int CD = 2 ;
@@ -15,7 +18,9 @@ public class Video {
 	private Date registeredDate ;
 	private boolean rented ;
 
+
 	public Video(String title, int videoType, int priceCode, Date registeredDate) {
+		// registeredDate가 여기 있어야 하는가?
 		this.setTitle(title) ;
 		this.setVideoType(videoType) ;
 		this.setPriceCode(priceCode) ;

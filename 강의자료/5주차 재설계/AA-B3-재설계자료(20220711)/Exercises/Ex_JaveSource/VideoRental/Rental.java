@@ -46,7 +46,10 @@ public class Rental {
 		this.returnDate = returnDate;
 	}
 
+
 	public int getDaysRentedLimit() {
+		// Customer랑 중복되는 부분 확인
+		// 꼭 Rental에서 해야하는 일이 맞는지도 확인 필요
 		int limit = 0 ;
 		int daysRented ;
 		if (getStatus() == 1) { // returned Video

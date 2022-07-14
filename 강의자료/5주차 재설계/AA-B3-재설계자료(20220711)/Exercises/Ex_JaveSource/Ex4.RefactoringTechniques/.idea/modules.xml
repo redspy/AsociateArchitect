@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Ex4.RefactoringTechniques.iml" filepath="$PROJECT_DIR$/.idea/Ex4.RefactoringTechniques.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrganizingData/OrganizingData.iml" filepath="$PROJECT_DIR$/OrganizingData/OrganizingData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleSmells/SimpleSmells.iml" filepath="$PROJECT_DIR$/SimpleSmells/SimpleSmells.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimplifyingCondExp/SimplifyingCondExp.iml" filepath="$PROJECT_DIR$/SimplifyingCondExp/SimplifyingCondExp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimplifyingMethodCalls/SimplifyingMethodCalls.iml" filepath="$PROJECT_DIR$/SimplifyingMethodCalls/SimplifyingMethodCalls.iml" />
+    </modules>
+  </component>
+</project>

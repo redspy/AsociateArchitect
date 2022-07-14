@@ -4,8 +4,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class VRUI {
+	// 전체적인 함수가 UI와 Logic(Customer, UI)이 분리되지 않음
 	private static Scanner scanner = new Scanner(System.in) ;
 
+	// 두개의 List를 운용하고 있음
 	private List<Customer> customers = new ArrayList<Customer>() ;
 
 	private List<Video> videos = new ArrayList<Video>() ;
@@ -34,6 +36,7 @@ public class VRUI {
 	}
 
 	public void clearRentals() {
+		// duplication Method
 		System.out.println("Enter customer name: ") ;
 		String customerName = scanner.next() ;
 
@@ -48,13 +51,14 @@ public class VRUI {
 		if ( foundCustomer == null ) {
 			System.out.println("No customer found") ;
 		} else {
+			// SRP violation query
 			System.out.println("Name: " + foundCustomer.getName() +
 					"\tRentals: " + foundCustomer.getRentals().size()) ;
 			for ( Rental rental: foundCustomer.getRentals() ) {
 				System.out.print("\tTitle: " + rental.getVideo().getTitle() + " ") ;
 				System.out.print("\tPrice Code: " + rental.getVideo().getPriceCode()) ;
 			}
-
+			// modifier
 			List<Rental> rentals = new ArrayList<Rental>() ;
 			foundCustomer.setRentals(rentals);
 		}
@@ -78,6 +82,7 @@ public class VRUI {
 
 		List<Rental> customerRentals = foundCustomer.getRentals() ;
 		for ( Rental rental: customerRentals ) {
+			// if문이 보기 힘듬
 			if ( rental.getVideo().getTitle().equals(videoTitle) && rental.getVideo().isRented() ) {
 				rental.returnVideo();
 				rental.getVideo().setRented(false);
@@ -159,7 +164,7 @@ public class VRUI {
 		}
 
 		if ( foundCustomer == null ) return ;
-
+		//얘도 함수로 빼야하는가
 		System.out.println("Enter video title to rent: ") ;
 		String videoTitle = scanner.next() ;
 
@@ -181,6 +186,7 @@ public class VRUI {
 		foundCustomer.setRentals(customerRentals);
 	}
 
+	// customer랑 video를 각각 만드는게 좋을듯
 	public void register(String object) {
 		if ( object.equals("customer") ) {
 			System.out.println("Enter customer name: ") ;
