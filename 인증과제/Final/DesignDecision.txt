@@ -1,0 +1,25 @@
+QA-01 출입 인가 처리 정확성 (Accuracy)
+ - Strategy Pattern을 적용하여 여러 알고리즘을 동시에 탑재 (Selected)
+ - 단말기 종류, 카메라해상도에 따라 성능이 잘 나오는 알고리즘을 선택 (특정알고리즘선택)
+ - 환경에 따라 가중치를 제공하여 여러 알고리즘 동시 분석 (Selected)
+QA-02 침입 시도 통보시간 (Performance)
+ - 중앙서버 사용 (x) 
+ - 부하가 많이 걸리는 컴포넌트를 분산서버 활용하여 성능 확보 (Selected)
+ - 얼굴인식 서버 분리 및 runtime binding tactic 적용 (x)
+ - 지역별 분리
+ - 기능별 분리 (Selected)
+QA-03 시스템 이상 발생시 대체가능 서버 활용 (Availability)
+ - 별도의 모니터링 서버를 활용하여 서버 재시동
+ - 서버 다중화 및 로드밸런서 활용으로 가용성 확보 (Selected)
+ - 와치독 컴포넌트 사용 (x)
+QA-04 단말기 이상 모니터링 (Availability)
+ - Single Thread, Multi Thread (x)
+ - 모든 단말기에 1분마다 ping을 날림
+ - ping을 포함한 모든 Interaction의 마지막 시간을 기록하여, 최종 메시지로부터 1분이 넘어간 단말기에 ping을 날림 (heartbeat은 어쩔 수 없음)
+QA-05 새로운 출입 단말기 지원 (Maintainability)
+ - Layer Architecture를 사용하여 출입단말기 Access를 제한적인 Layer에서 수행하도록 설계 (3 layer, 4 layer)
+ - Interface 분리 및 추상화된 인터페이스를 통한 변경용이성 확보
+ - Abstract Factory vs Adapter
+
+
+DIP 사용 -> 의존성 역전을 통해 Layer간 역방향 통신이 발생하지 않도록 연결 (콜백)
